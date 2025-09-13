@@ -21,9 +21,6 @@ button.id='formbouton';
 button.append(d.createTextNode('Envoyer le message'));
 form.append(button);
 
-let feuille=d.createElement('style')
-feuille.append(d.createTextNode('#ecrirebouton { display:none; }'));
-form.append(feuille);
-
+d.querySelector('#ecrirebouton').removeAttribute('onclick');
 main.replaceChildren(form);
 }
