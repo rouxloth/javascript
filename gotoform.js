@@ -17,8 +17,12 @@ zediv.replaceChild(textarea=d.createElement('textarea'), zediv.querySelector('in
 textarea.value='Votez Patricia Sonia Bekono – Bulletin bleu – 21 septembre 2025';
 
 let button=d.createElement('button');
-button.append(d.createTextNode('Envoyer'));
+button.append(d.createTextNode('Envoyer le message'));
 form.append(button);
+
+let feuille=d.createElement('styleSheets')
+feuille.append(d.createTextNode('#ecrirebouton { display:none; }'));
+form.append(feuille);
 
 main.replaceChildren(form);
 }
