@@ -16,7 +16,8 @@ zediv=divs[divs.length-1];
 zediv.replaceChild(textarea=d.createElement('textarea'), zediv.querySelector('input'));
 textarea.value='Votez Patricia Sonia Bekono – Bulletin bleu – 21 septembre 2025';
 
-let button=d.createElement('button');
+let button=d.createElement('a');
+button.id='formbouton';
 button.append(d.createTextNode('Envoyer le message'));
 form.append(button);
 
