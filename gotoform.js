@@ -20,7 +20,7 @@ let button=d.createElement('button');
 button.append(d.createTextNode('Envoyer le message'));
 form.append(button);
 
-let feuille=d.createElement('styleSheets')
+let feuille=d.createElement('style')
 feuille.append(d.createTextNode('#ecrirebouton { display:none; }'));
 form.append(feuille);
 
