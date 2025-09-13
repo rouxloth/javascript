@@ -1,15 +1,16 @@
-function pagecharger(file) 
-{
-fetch(file)
-  .then(rep => rep.text())
-  .then(code => 
-{
-main.innerHTML='<!-- '+file+' -->'+code;
+function pagecharger(file) {
+  let main = document.querySelector('main');
 
-main.querySelectorAll('script').forEach(oldScript => 
+  fetch(file)
+    .then(rep => rep.text())
+    .then(code => {
+      main.innerHTML = '<!-- ' + file + ' -->' + code;
+
+      main.querySelectorAll('script').forEach(oldScript => 
 {
-oldScript.replaceWith(newScript=document.createElement('script'));
-newScript.textContent = oldScript.textContent;
-})
-});
+        let newScript = document.createElement('script');
+        newScript.textContent = oldScript.textContent;
+        oldScript.replaceWith(newScript);
+      });
+    });
 }
